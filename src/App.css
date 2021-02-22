@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
 }
 
 .App-link {
@@ -33,4 +33,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+  margin: 0px 20px;
+}
+
+.card.selected {
+  border: 3px solid #41cc16;
+}
+
+.currency-icon {
+  max-width: 50px;
+  width: 100%;
 }
