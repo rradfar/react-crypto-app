@@ -4,6 +4,7 @@ import btcImage from '../assets/btc.png';
 import ethImage from '../assets/eth.png';
 import xemImage from '../assets/xem.png';
 import BuyForm from './BuyForm';
+import Transactions from './Transactions';
 
 const Home = () => {
   const currencies = [
@@ -13,9 +14,14 @@ const Home = () => {
   ];
 
   const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
+  const [list, setList] = useState([]);
 
   const handleSelect = data => {
     setSelectedCurrency(data);
+  };
+
+  const buildList = list => {
+    setList(list);
   };
 
   return (
@@ -32,9 +38,11 @@ const Home = () => {
               />
             ))}
           </div>
-          <BuyForm data={selectedCurrency} />
+          <BuyForm data={selectedCurrency} onPurchase={buildList} />
         </div>
-        <div className='col-6'>col 2</div>
+        <div className='col-6'>
+          <Transactions list={list} />
+        </div>
       </div>
     </div>
   );
