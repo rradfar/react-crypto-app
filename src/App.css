@@ -50,3 +50,13 @@
   max-width: 50px;
   width: 100%;
 }
+
+.form {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.form .fas {
+  line-height: unset;
+  padding: 0px 10px;
+}
