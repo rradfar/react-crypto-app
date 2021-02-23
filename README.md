@@ -1,1 +1,3 @@
-# A basic Crypto app made with React
+# A simple crypto exchange UI made with React.
+
+![screenshot](public/screenshot.png)
